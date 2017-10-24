@@ -1,7 +1,7 @@
-var Hue = require('./lib/Hue');
+var Hue = require('./lib/Hue')
 
-exports.discover = require('./lib/Discoverer');
+exports.discover = require('./lib/Discoverer')
 
 exports.createClient = function(config) {
-  return new Hue(config);
-};
+  return new Hue(config)
+}

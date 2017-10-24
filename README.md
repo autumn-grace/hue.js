@@ -11,7 +11,7 @@ npm install hue.js
 
 ## To use
 ```javascript
-var Hue = require('hue.js');
+var Hue = require('hue.js')
 ```
 
 ## Discover Hue Bridges
@@ -19,8 +19,8 @@ var Hue = require('hue.js');
 
 Hue.discover(function(stations) {
 
-  console.log(stations);
-});
+  console.log(stations)
+})
 ```
 
 ## Register your app
@@ -29,14 +29,14 @@ Hue.discover(function(stations) {
 var client = Hue.createClient({
   stationIp:station, // 'x.x.x.x', retrieved from the previous step
   appName:appName // Any alpha numeric name for your app
-});
+})
 
 client.lights(function(err,lights) {
 
   if (err && err.type === 1) {
     // App has not been registered
 
-    console.log("Please go and press the link button on your base station(s)");
+    console.log("Please go and press the link button on your base station(s)")
     client.register(function(err) {
 
       if (err) {
@@ -44,11 +44,11 @@ client.lights(function(err,lights) {
       } else {
         // Registered, carry on
       }
-    });
+    })
   } else {
-    console.log(lights);
+    console.log(lights)
   }
-});
+})
 ```
 
 ## Hue API
